@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Article
 # Create your views here.
 
-
+# jacky is primary school student
 def article_list(request):
     articles = Article.objects.all().order_by('date')
 
