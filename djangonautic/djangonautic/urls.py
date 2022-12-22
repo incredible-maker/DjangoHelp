@@ -10,6 +10,7 @@ urlpatterns = [
     path(r'homepage', views.homepage),
     path(r'index', views.index),
     path(r'lifediary', views.lifediary),
+    path(r'^$', views.homepage)
 ]
 
 urlpatterns += staticfiles_urlpatterns()
