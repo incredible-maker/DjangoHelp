@@ -1,25 +1,15 @@
 {%extends 'base_layout.html' %}
-{% load static %}
+{% block content%}
 
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="en">
-<head>
-    <meta http-equiv="utf-8" content="text/html;charset=UTF-8">
-    <title>Articles</title>
-</head>
-<body>
     <h1>Article List</h1>
-    <div class="articles">
-        {% for article in article %}
-        <div class="article">
-            <h2><a href="#">{{article.title}}</a></h2>-->
+    <div class="article">
+        {% for article in articles %}
+          <div class="article">
+            <h2><a href="#">{{article.title}}</a></h2>
             <p>{{article.snippet}}</p>
             <p>{{article.date}}</p>
-        </div>
+          </div>
         {% endfor %}
     </div>
-</body>
-</html>
 {% endblock %}
 
