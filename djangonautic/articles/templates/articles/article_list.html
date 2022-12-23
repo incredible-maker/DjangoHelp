@@ -1,14 +1,25 @@
+{%extends 'base_layout.html' %}
 {% load static %}
 
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="utf-8" content="text/html;charset=UTF-8">
     <title>Articles</title>
-    <link rel="stylesheet" href="{% static 'myfirst.css'%}">
 </head>
-    <h1>Article list</h1>
+<body>
+    <h1>Article List</h1>
     <div class="articles">
-    <h2><a href="#">{{article.title}}</a></h2>
-    <p>{{article.snippet}}</p>
-    <p>{{article.date}}</p>
+        {% for article in article %}
+        <div class="article">
+            <h2><a href="#">{{article.title}}</a></h2>-->
+            <p>{{article.snippet}}</p>
+            <p>{{article.date}}</p>
+        </div>
+        {% endfor %}
     </div>
+</body>
+</html>
+{% endblock %}
+
